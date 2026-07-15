@@ -30,7 +30,6 @@ df2 <- df1 |> pivot_longer(cols = m1:m3) |>
 ggplot(df2, aes(name, AIC, col = generating_process, 
                 group = generating_process)) + geom_point() + geom_line()
     
-.x <- 1
 p <- map(1:nrow(df2), ~ marginaleffects::predictions(
   df2$value[[.x]], 
   newdata = data.frame(x = seq(-2, 2, len = 100))) |> 

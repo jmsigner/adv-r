@@ -17,6 +17,8 @@ df$y <- (1 + rnorm(K, sd = 3)[as.numeric(factor(df$group))]) +
   rnorm(n, sd = 0.5)
 
 lmm1 <- glmmTMB(y ~ x + (1 | group), data = df, REML = FALSE)
+fixef(lmm1)
+ranef(lmm1)
 
 
 beta_hat <- fixef(lmm1)$cond      
