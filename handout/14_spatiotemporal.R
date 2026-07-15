@@ -66,7 +66,7 @@ image(pred0, main="Pred m0")
 pred1 <- sapply(1:61, predict_col, m1)
 image(pred1, main="Pred m1")
 
-AIC(f0, f1)
+AIC(m0, m1)
 
 # ... glmmTMB (K): Temporal Autocorrelation ----
 
