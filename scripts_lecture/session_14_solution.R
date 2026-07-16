@@ -67,8 +67,7 @@ m2i <- glmmTMB(mean_loss ~ bio1 + (bio1 | point_id) + ar1(year1 + 0 | point_id),
 m2j <- glmmTMB(mean_loss ~ bio1 + (bio1 | point_id) + exp(pos + 0 | group), data = dat1)
 
 ## Geospatial model
-m2k <- glmmTMB(mean_loss ~ bio1 + (bio1 | point_id) + 
-                 ar1(year1 + 0 | point_id)  + 
+m2k <- glmmTMB(mean_loss ~ bio1 + (bio1 | point_id) + ar1(year1 + 0 | point_id)  + 
                  exp(pos + 0 | group), data = dat1)
 
 ## Results ----
